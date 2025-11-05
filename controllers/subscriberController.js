@@ -25,7 +25,8 @@ const getSubscriptionPage = (req, res) => {
 };
 
 const saveSubscriber = (req, res) => {
-  const newSubscriber = new Subscriber({
+    // new subscriber instance. give it's data from the request body
+  let newSubscriber = new Subscriber({
     name: req.body.name,
     email: req.body.email,
     zipCode: req.body.zipCode,
