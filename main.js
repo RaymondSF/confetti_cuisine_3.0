@@ -1,6 +1,5 @@
-"use strict";
-
 import express from "express";
+import dotenv from "dotenv";
 
 import {
   showCourses,
@@ -13,10 +12,17 @@ import {
   internalServerError,
 } from "./controllers/errorController.js";
 
+import mongoose from "mongoose";
 import layouts from "express-ejs-layouts";
+
+const mongoUri = process.env.MONGODB_URI;
+mongoose.connect(mongoUri);
+
+const app = express();
 
 // first change the error and homeController to ES6 and make the subscriberController.js file
 // second add the imports from the error and homeControllers and layout.ejs. from views
+// third configure both env and MongoDb Mongoose
 
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
