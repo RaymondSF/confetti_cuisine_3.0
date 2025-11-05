@@ -1,19 +1,30 @@
 <div class="container">
   <div class="col-sm-6">
-    <img src="images/graph.png" alt="">
-  </div>
-  <div class="col-sm-6">
     <h1>Reach out to us!</h1>
     <p>Enter your email if you're interested to learn more:</p>
-    <form action="/contact" method="post">
+    <form action="/subscribe" method="post">
       <label for="name">Name</label>
-      <input type="text" name="name" value="">
-      <br>
+      <input type="text" name="name" value="" />
+      <br />
       <label for="email">Email</label>
-      <input type="email" name="email" value="">
-      <br>
-      <input class="button" type="submit" value="submit">
+      <input type="email" name="email" value="" />
+      <br />
+      <label for="zipCode">Zip Code</label>
+      <input
+        type="text"
+        pattern="[0-9]{5}"
+        name="zipCode"
+        placeholder="Zip code"
+      />
+      <br />
+      <label for="streetAddress">Street address</label>
+      <input type="text" name="streetAddress" placeholder="Street address" />
+      <br />
+      <label for="vip">VIP</label>
+      <input type="checkbox" name="vip" />
+      <br />
+      <input class="button" type="submit" value="submit" />
     </form>
-    <p> We'll get back to you soon!</p>
+    <p>We'll get back to you soon!</p>
   </div>
 </div>

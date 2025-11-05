@@ -24,7 +24,6 @@ const saveSubscriber = async (req, res) => {
       streetAddress: req.body.streetAddress,
       vip: req.body.vip,
     });
-
     await newSubscriber.save();
     res.render("thanks");
   } catch (error) {

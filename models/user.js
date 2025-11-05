@@ -25,9 +25,10 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  courses: [{ type: mongoose.schema.types.objectId, ref: "Course" }],
+  courses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
   subscribedAccount: {
-    type: mongoose.schema.Types.ObjectsId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Subscriber",
   },
 });
+export default mongoose.model("User", userSchema);

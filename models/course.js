@@ -2,29 +2,29 @@ import mongoose from 'mongoose';
 
 const courseSchema = mongoose.Schema(
     title: {
-        type: string,
+        type: String,
         required: true,
         unique: true,
 
     },
     description: {
-        type: string,
+        type: String,
         required: true,
 
     },
     maxStudents: {
-        type: number,
+        type: Number,
         default: 0,
         min [0, "Course cannot have less than zero members"],
 
 
     },
-    const: {
-        type: number,
+    cost: {
+        type: Number,
         default: 0,
          min [0, "Course cannot have negative cost"],
 
     },
-    timestamps: true
+    { timestamps: true }
 );
-export default mongoose.model("course", courseSchema)
+export default mongoose.model("Course", courseSchema)
