@@ -1,10 +1,22 @@
 "use strict";
 
-const express = require("express"),
-  app = express(),
-  homeController = require("./controllers/homeController"),
-  errorController = require("./controllers/errorController"),
-  layouts = require("express-ejs-layouts");
+import express from "express";
+
+import {
+  showCourses,
+  showSignUp,
+  postedSignUpForm,
+} from "./controllers/homeController.js";
+
+import {
+  pageNotFoundError,
+  internalServerError,
+} from "./controllers/errorController.js";
+
+import layouts from "express-ejs-layouts";
+
+// first change the error and homeController to ES6 and make the subscriberController.js file
+// second add the imports from the error and homeControllers and layout.ejs. from views
 
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
